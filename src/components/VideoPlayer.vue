@@ -53,7 +53,7 @@ const BUTTONS = [
       </video>
     </suspense>
     <div>
-      <button v-for="button in BUTTONS" :key="button.name" @click="button.click">{{button.label}}</button>
+      <button v-for="{ name, label, click } in BUTTONS" :key="name" @click="click">{{label}}</button>
     </div>
   </div>
 </template>
