@@ -47,11 +47,9 @@ const BUTTONS = [
 
 <template>
   <div>
-    <suspense>
       <video ref="videoRef" v-bind="$attrs" @ended="onVideoEnded">
         Your browser does not support the video tag.
       </video>
-    </suspense>
     <div>
       <button v-for="{ name, label, click } in BUTTONS" :key="name" @click="click">{{label}}</button>
     </div>
